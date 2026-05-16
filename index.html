@@ -12,7 +12,53 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f2f5;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 150px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 0 8px 8px 0;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 0;
+            z-index: 999;
+        }
+        .sidebar a {
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: background 0.3s, color 0.3s;
+        }
+        .sidebar a:hover {
+            background: #1a73e8;
+            color: white;
         }
         .container {
             text-align: center;
@@ -25,9 +71,16 @@
     </style>
 </head>
 <body>
+    <div class="banner">Welcome to the Studio</div>
+    <div class="sidebar">
+        <a href="#artwork">Artwork</a>
+        <a href="#store">Store</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="#blog">Blog</a>
+    </div>
     <div class="container">
         <h1>Welcome to My Website</h1>
-        <p>This site was created for GitHub Pages.</p>
+        <p>Today's Date: Friday, May 15, 2026</p>
     </div>
 </body>
 </html>
